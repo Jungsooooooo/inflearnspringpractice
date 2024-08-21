@@ -27,6 +27,9 @@ public class RequestHeaderServlet extends HttpServlet {
         //헤더 네임들 출력
         request.getHeaderNames().asIterator()
                 .forEachRemaining(headerName -> System.out.println("headerName = " + headerName));
+
+        // 원하는 헤더 네임 출력
+        request.getHeader("");
         
         //언어 세팅.. 
         request.getLocales().asIterator()
@@ -40,6 +43,6 @@ public class RequestHeaderServlet extends HttpServlet {
         }
         
         //GET은 컨텐트 타입 없음
-        
+        request.getContentType(); //application/json
     }
 }
